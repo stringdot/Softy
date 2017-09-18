@@ -1,2 +1,2 @@
 # Softy
-Do you have any questions? Ask Softy.
+Do you have any question? Ask Softy.
