@@ -23,10 +23,30 @@ namespace Softy
             {
                 ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
                 // calculate something for us to return
-                int length = (activity.Text ?? string.Empty).Length;
+                // int length = (activity.Text ?? string.Empty).Length;
 
                 // return our reply to the user
-                Activity reply = activity.CreateReply($"You sent {activity.Text} which was {length} characters");
+                //Activity reply = activity.CreateReply($"You sent {activity.Text} which was {length} characters");
+                Activity reply= activity.CreateReply($" ");
+                switch (activity.Text)
+                {
+                    case "hi":
+                        reply = activity.CreateReply($"Hello");
+                        break;
+                    case "how are you?":
+                        reply = activity.CreateReply($"I am fine. Thank you.");
+                        break;
+                    case "do you like pizza?":
+                        reply = activity.CreateReply($"Yes. Of course. Pizza is my favourite.");
+                        break;
+                    case "name your best friend":
+                        reply = activity.CreateReply($"Cosmin");
+                        break;
+                    case "have a nice day":
+                        reply = activity.CreateReply($"You too my friend.");
+                        break;
+                }
+
                 await connector.Conversations.ReplyToActivityAsync(reply);
             }
             else
