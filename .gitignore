@@ -240,3 +240,8 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+# Added by Cosmin
+Softy.sln
+packages/
+Softy/*.config
