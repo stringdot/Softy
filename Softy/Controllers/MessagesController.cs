@@ -43,7 +43,10 @@ namespace Softy
                         reply = activity.CreateReply($"Cosmin");
                         break;
                     case "have a nice day":
-                        reply = activity.CreateReply($"You too my friend.");
+                        reply = activity.CreateReply($"Thank you. You too.");
+                        break;
+                    default:
+                        reply = activity.CreateReply($"I don't know the answer to this question.");
                         break;
                 }
 
